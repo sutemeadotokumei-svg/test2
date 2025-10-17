@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <div id="status-screen" class="status-screen" style="display: block;">
+    <h1>初期設定</h1>
+      <label for="playerName">プレイヤー名:</label>
+      <input type="text" id="playerName" maxlength="10" placeholder="入力欄（最大10文字）">
+      <div class="stasetting">
+        <h2>ステータス設定</h2>
+        <p id="stapoint"><button id="sta">一括でダイスを振る</button><span class="lim"><span id="Total">00</span>/15</span></p>
+          <div class="syokista">
+          
+            <p>HP:<span id="HP"></span><button id="hp_set" class="staset">🎲</button></p>
+            <p>攻撃力:<span id="ATK"></span><button id="atk_set" class="staset">🎲</button></p>
+
+            <p>幸運値：<span id="LUCK"> </span><button id="luck_set" class="staset">🎲</button></p>
+            <p>SAN値：<span id="SAN"> </span><button id="san_set" class="staset">🎲</button></p>
+            <!-- <p>所持品：<span id="item"></span></p> -->
+          </div>
+      </div>
+
+    <button id="start" class="start">ゲームを開始する</button>
+   </div>
+
+  <div id = "sta-screen" style="display: none;">
+    <button id="StatusBuck" class="StatusBuck">ゲームに戻る</button>
+    <h1>ステータス</h1>
+          <p>Name:<span id="playerName_game"></span></p>
+
+          <p>HP:<span id="HP_game"></span></p>
+          <p>攻撃力:<span id="ATK_game"></span></p>
+          <p>幸運値：<span id="LUCK_game"></span></p>
+          <p>SAN値：<span id="SAN_game"></span></p>
+          <p>持ち物<ul id="items"></ul></p>
+  </div>
+
+  <div id="cmd-screen" style="display: none;" class="cmd-screen">
+    <div class="cmdtx">コマンドを選択してください</div>
+    <div id="cmd">
+      <button id="cmd1" class="cmd1"><span id=cmdtext1></span></button>
+      <button id="cmd2" class="cmd2"><span id=cmdtext2></span></button>
+      <button id="cmd3" class="cmd3"><span id=cmdtext3></span></button>
+    </div>
+  </div>
+
+    <div id="cmd-screen" style="display: none;" class="2cmd-screen">
+    <div class="2cmdtx">コマンドを選択してください</div>
+    <div id="2cmd">
+      <button id="2cmd1" class="2cmd1"><span id=2cmdtext1></span></button>
+      <button id="2cmd2" class="2cmd2"><span id=2cmdtext2></span></button>
+    </div>
+  </div>
+
+  <div id="game-screen" class="gamesc" style="display: none;">
+    <button id="Status" class="Status">ステータス確認</button>
+    <button class="next" id="next">次へ</button>
+
+    <div class="sptxbox">
+      <div id = "spebox">
+        <div id="speakerbox">
+          <p id="speaker">xxxx</p>
+        </div>
+      </div>
+      <div id = "messbox">
+        <div id="textbox">
+          <p id="text">xxxx</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    <div id="dice-screen" style="display: none;">
+      <div class="dicetx">ダイスを振ってください。</div>
+      <button id="dicescreen" class="dicescreen">ダイスを振る</button>
+    </div>
+
+    <div id="gameover" class="gameover" style="display: none;">
+      <div class="gameovertx">GAME OVER!</div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
